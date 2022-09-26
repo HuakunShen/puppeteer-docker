@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM --platform=linux/amd64 ubuntu
 
 RUN apt update && apt install -y sudo curl \
     libxkbcommon-x11-0 \

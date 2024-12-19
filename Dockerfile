@@ -12,9 +12,11 @@ RUN apt update && apt install -y sudo curl \
     libxcomposite-dev \
     libxrandr2 \
     libasound2 \
-    vim
+    vim \
+    unzip
 
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 RUN apt-get install -y nodejs && npm i -g yarn
+RUN curl -fsSL https://bun.sh/install | bash
 
 # docker build . -t huakunshen/puppeteer

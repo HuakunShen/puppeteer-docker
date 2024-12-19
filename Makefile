@@ -1,7 +1,7 @@
 all: build push
 
 build:
-	docker build . -t huakunshen/puppeteer
+	docker build --platform=linux/amd64 . -t huakunshen/puppeteer
 
 push:
 	docker push huakunshen/puppeteer
